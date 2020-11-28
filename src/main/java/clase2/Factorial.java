@@ -25,6 +25,16 @@ public class Factorial {
             inicializacion++;
         }
 
-        System.out.println("El factorial de " + numero + " es " + factorial);
+        // System.out.println("El factorial de " + numero + " es " + factorial);
+        System.out.println("El factorial de " + numero + " es " + calculaFactorial(numero));
+    }
+
+    public static int calculaFactorial(int numero) {
+        int factorial = 1;
+        for(int in = 1; in <= numero; in++ ) {
+            factorial = factorial * in;
+        }
+
+        return factorial;
     }
 }

@@ -23,6 +23,10 @@ public class Bucles {
             a++; // a = a + 1
         } while(a <= 5);
 
+        System.out.println("************ FOR ************");
+        for(int i = 1; i <= 5 ; i++) {
+            System.out.println(i);
+        }
 
     }
 }
