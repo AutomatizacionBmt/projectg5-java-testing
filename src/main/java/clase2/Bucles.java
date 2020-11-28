@@ -28,5 +28,17 @@ public class Bucles {
             System.out.println(i);
         }
 
+        System.out.println("************ FOR EACH ************");
+
+        String[] nombres2 = {"Giancarlo", "Elvis", "Ashley"};
+        // for (TipoDeDato nombreVariable : coleccion)
+        /*for(int i = 0; i < nombres2.length; i++) {
+            System.out.println(nombres2[i]);
+        }*/
+
+        for(String nombre : nombres2) {
+            System.out.println(nombre);
+        }
+
     }
 }
