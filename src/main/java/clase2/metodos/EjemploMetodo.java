@@ -8,6 +8,8 @@ import java.util.Scanner;
  */
 public class EjemploMetodo {
 
+    int valor;
+
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
