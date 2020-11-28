@@ -40,5 +40,15 @@ public class Bucles {
             System.out.println(nombre);
         }
 
+        System.out.println("************ FOR ANIDADO ************");
+
+        for(int k = 0; k <= 5; k++) {
+            int l = 0;
+            while(l <= 5) {
+                System.out.println(l);
+                l++;
+            }
+        }
+
     }
 }
