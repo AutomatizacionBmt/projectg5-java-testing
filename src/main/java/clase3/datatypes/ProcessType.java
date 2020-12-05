@@ -14,6 +14,7 @@ public class ProcessType {
         stringBuilder();
         addSpaces("Hola!EstamosAutomatizandoElMundo");
         //Hola! Estamos Automatizando El Mundo
+        methodsString();
     }
 
     private static void countWords(String text) {
@@ -26,11 +27,13 @@ public class ProcessType {
     }
 
     private static void reversedString(String text) {
-        // quiero una manzana
+        /*// quiero una manzana
         for(int i = text.length() - 1; i >= 0; i--) {
             System.out.print(text.charAt(i));
         }
-        System.out.println();
+        System.out.println();*/
+        StringBuilder stringBuilder = new StringBuilder(text);
+        System.out.println(stringBuilder.reverse());
     }
 
     private static void stringBuilder() {
@@ -56,5 +59,25 @@ public class ProcessType {
             }
         }
         System.out.println(stringBuilder);
+    }
+
+    private static void methodsString() {
+        String name = "Giancarlo";
+        if (name.startsWith("Gian")) {
+            System.out.println("Yes");
+        }
+
+        if (name.endsWith("carlo")) {
+            System.out.println("Yes endswith");
+        }
+
+        System.out.println(name.indexOf("a"));
+        System.out.println(name.lastIndexOf("a"));
+        System.out.println(name.substring(2));
+
+
+        System.out.println("    Hola Mundo   ".trim());
+        System.out.println("Giancarlo".replace("r", "k"));
+        System.out.println("Hola".concat(" Mundo").concat(" Como estan"));
     }
 }
