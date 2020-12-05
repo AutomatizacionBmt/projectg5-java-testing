@@ -41,12 +41,14 @@ public class TicketLoteria2 {
     }
 
     private static boolean searchSequential(int[] array, int numberToSearch) {
-        for(int i = 0; i < array.length; i++) {
+        /*for(int i = 0; i < array.length; i++) {
             if (array[i] == numberToSearch) {
                 return true;
             }
         }
-        return false;
+        return false;*/
+        return Arrays.stream(array)
+                .anyMatch(number -> number == number);
     }
 
     private static boolean binarySearch(int[] array, int numberToSearch) {
