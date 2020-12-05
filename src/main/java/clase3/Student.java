@@ -42,6 +42,8 @@ public class Student {
             }
         }
 
+        System.out.println("Holaaaaaaaa");
+
         for(int row = 0; row < 2; row++) {
             System.out.println("Values row " + row);
             for(int column = 0; column < 3; column++) {
