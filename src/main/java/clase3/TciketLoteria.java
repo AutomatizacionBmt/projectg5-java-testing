@@ -53,7 +53,7 @@ public class TciketLoteria {
         Random random = new Random();
 
         for (int i = 0; i < numeroDeElementos; i++) {
-            int aleatorio = random.nextInt(69) + 1 ; // 1 - 69
+            int aleatorio = random.nextInt(max) + 1 ; // 1 - 69
             tickets[i] = aleatorio;
         }
 
