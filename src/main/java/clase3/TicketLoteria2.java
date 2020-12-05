@@ -1,6 +1,7 @@
 package clase3;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 
 /**
@@ -14,10 +15,16 @@ public class TicketLoteria2 {
 
     public static void main(String[] args) {
         int[] tickets = generateTickets();
-        //boolean resultSequential = searchSequential(tickets, 4);
-        boolean resultBinarySearch = binarySearch(tickets, 4);
-        System.out.println("Encontrado: " + resultBinarySearch);
+        tickets = sorted(tickets);
+        boolean resultSequential = searchSequential(tickets, 4);
+        // boolean resultBinarySearch = binarySearch(tickets, 4);
+        System.out.println("Encontrado: " + resultSequential);
         printTickets(tickets);
+
+        System.out.println(" ********** Arrays Integer **********");
+        Integer[] ticketsInteger = generateTicketsInteger();
+        Arrays.sort(ticketsInteger, Collections.reverseOrder());
+        printTicketsInteger(ticketsInteger);
     }
 
     private static int[] generateTickets() {
@@ -56,5 +63,32 @@ public class TicketLoteria2 {
         for (int i = 0; i < tickets.length; i ++) {
             System.out.println("Elemento de la posicion " + i + " : " + tickets[i]);
         }
+    }
+
+    private static Integer[] generateTicketsInteger() {
+
+        Integer[] tickets = new Integer[numeroDeElementos];
+        Random random = new Random();
+
+        for (int i = 0; i < numeroDeElementos; i++) {
+            int aleatorio = random.nextInt(max) + 1 ; // 1 - 69
+            tickets[i] = aleatorio;
+        }
+
+        return tickets;
+    }
+
+    private static void printTicketsInteger(Integer[] tickets) {
+        for (int i = 0; i < tickets.length; i ++) {
+            System.out.println("Elemento de la posicion " + i + " : " + tickets[i]);
+        }
+    }
+
+    private static int[] sorted(int[] array) {
+        int[] arraySorted = Arrays.stream(array).boxed()
+                .sorted(Collections.reverseOrder())
+                .mapToInt(Integer::intValue)
+                .toArray();
+        return arraySorted;
     }
 }
