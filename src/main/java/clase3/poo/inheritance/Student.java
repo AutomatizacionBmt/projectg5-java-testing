@@ -2,44 +2,13 @@ package clase3.poo.inheritance;
 
 import java.time.LocalDate;
 
-public class Student {
+public class Student extends Person {
 
-    private String name;
-    private String lastName;
-    private String email;
-    private LocalDate birthDate;
     private String studentId;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public LocalDate getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(LocalDate birthDate) {
-        this.birthDate = birthDate;
+    public Student(String name, String lastName, String email, LocalDate birthDate, String studentId) {
+        super(name, lastName, email, birthDate);
+        this.studentId = studentId;
     }
 
     public String getStudentId() {
@@ -50,11 +19,17 @@ public class Student {
         this.studentId = studentId;
     }
 
+    @Override
     public void goToSalon() {
-        System.out.println("Soy el profesor y voy a clases porque tengo que dictarlas");
+        System.out.println("Soy el Estudiante y escucho las clases");
     }
 
     public void toGivenAnExam() {
         System.out.println("Voy a dar mi examen");
+    }
+
+    public void printNameComplete(String config) {
+        System.out.println(config);
+        super.printNameComplete();
     }
 }
