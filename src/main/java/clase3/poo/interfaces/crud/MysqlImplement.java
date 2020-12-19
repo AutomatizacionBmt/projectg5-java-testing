@@ -1,6 +1,6 @@
 package clase3.poo.interfaces.crud;
 
-public class MysqlImplement implements DataAccess {
+public class MysqlImplement implements DataAccess, Logger {
 
     @Override
     public void create() {
@@ -20,5 +20,15 @@ public class MysqlImplement implements DataAccess {
     @Override
     public void delete() {
         System.out.println("Eliminar desde Mysql");
+    }
+
+    @Override
+    public void info() {
+        System.out.println("********************** MYSQL INFO **********************");
+    }
+
+    @Override
+    public void error() {
+        System.out.println("********************** MYSQL ERROR **********************");
     }
 }
