@@ -1,6 +1,7 @@
 package clase3.collections;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class ListExample {
@@ -42,5 +43,21 @@ public class ListExample {
         System.out.println(fruits.get(7));
 
         System.out.println(fruits.subList(0, 3));
+
+        System.out.println("************ Using Iterator ************");
+
+        Iterator iterator = fruits.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        System.out.println("************ Using ForEach ************");
+        for(String fruit : fruits) {
+            System.out.println(fruit);
+        }
+
+        System.out.println("************ Using Java 8 ************");
+        // fruits.forEach(fruit -> System.out.println(fruit));
+        fruits.forEach(System.out::println);
     }
 }
